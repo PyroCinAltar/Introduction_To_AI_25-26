@@ -46,12 +46,19 @@ def ai_move(b, ai='O', human='X'):
     # 2) Block opponent winning move
     m = winning_move(b, human)
     if m is not None: return m
+    
+    
+    # 3 could be overridden or happen after the check for entire board state.
+    
     # 3) Prefer center, then corners, then sides
     if b[4] == ' ': return 4
     for i in (0, 2, 6, 8):
         if b[i] == ' ': return i
     for i in (1, 3, 5, 7):
         if b[i] == ' ': return i
+        
+        
+        
     # Fallback (shouldn't happen)
     return next(i for i,v in enumerate(b) if v == ' ')
 
@@ -103,10 +110,13 @@ def main():
         else:
             print(f"\nResult: {result} wins!")
         again = input("\nPlay again? (y/n): ").strip().lower()
-        if again != 'y':
+        if again != 'y' or again != "yes":
             print("Thanks for playing!")
             break
         print()
 
 if __name__ == "__main__":
     main()
+    
+# Major issues: AI goes straight for the first possible prefered move instead of checking the entire board state
+# Difficulty levels would be useful
