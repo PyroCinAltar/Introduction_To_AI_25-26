@@ -12,10 +12,10 @@ from datetime import datetime
 from dataclasses import dataclass, field
 from typing import Optional, Callable, Dict, List, Any
 
-
 @dataclass
 class Intent:
     """Represents a single user intent with all its associated data."""
+
     name: str
     patterns: list
     responses: list
@@ -28,101 +28,102 @@ class Intent:
 
 class ConversationContext:
     """Manages the state and history of a conversation."""
-    
+
     def __init__(self):
         self.history = []
         self.current_context = None
         self.user_data = {}
         self.session_start = datetime.now()
-    
+
     def add_exchange(self, user_input: str, bot_response: str):
-        self.history.append({
-            'timestamp': datetime.now().isoformat(),
-            'user': user_input,
-            'bot': bot_response
-        })
-    
+        self.history.append(
+            {
+                "timestamp": datetime.now().isoformat(),
+                "user": user_input,
+                "bot": bot_response,
+            }
+        )
+
     def set_context(self, context: str):
         self.current_context = context
-    
+
     def clear_context(self):
         self.current_context = None
-    
+
     def set_user_data(self, key: str, value):
         self.user_data[key] = value
-    
+
     def get_user_data(self, key: str, default=None):
         return self.user_data.get(key, default)
-    
+
     def get_last_exchange(self):
         return self.history[-1] if self.history else None
 
 
 class SentimentAnalyzer:
     """Simple rule-based sentiment analysis."""
-    
+
     POSITIVE_WORDS = set()
     NEGATIVE_WORDS = set()
-    
+
     @classmethod
     def load_from_config(cls, config: Dict):
         """Load sentiment words from JSON configuration."""
-        if 'sentiment_words' in config:
-            sentiment_config = config['sentiment_words']
-            cls.POSITIVE_WORDS = set(sentiment_config.get('positive', []))
-            cls.NEGATIVE_WORDS = set(sentiment_config.get('negative', []))
+        if "sentiment_words" in config:
+            sentiment_config = config["sentiment_words"]
+            cls.POSITIVE_WORDS = set(sentiment_config.get("positive", []))
+            cls.NEGATIVE_WORDS = set(sentiment_config.get("negative", []))
             print(f"✓ Loaded {len(cls.POSITIVE_WORDS)} positive words")
             print(f"✓ Loaded {len(cls.NEGATIVE_WORDS)} negative words")
-    
+
     @classmethod
     def analyze(cls, text: str) -> dict:
         """Analyze the sentiment of a text string."""
         words = set(text.lower().split())
         positive_count = len(words & cls.POSITIVE_WORDS)
         negative_count = len(words & cls.NEGATIVE_WORDS)
-        
+
         if positive_count > negative_count:
-            sentiment = 'positive'
+            sentiment = "positive"
             score = positive_count / (positive_count + negative_count + 1)
         elif negative_count > positive_count:
-            sentiment = 'negative'
+            sentiment = "negative"
             score = -negative_count / (positive_count + negative_count + 1)
         else:
-            sentiment = 'neutral'
+            sentiment = "neutral"
             score = 0
-        
-        return {'sentiment': sentiment, 'score': score}
+
+        return {"sentiment": sentiment, "score": score}
 
 
 class ConfigLoader:
     """Handles loading and validating JSON configuration files."""
-    
     @staticmethod
     def load_config(filepath: str) -> Dict:
         """Load and parse a JSON configuration file."""
         if not os.path.exists(filepath):
             raise FileNotFoundError(f"Configuration file '{filepath}' not found!")
-        
-        with open(filepath, 'r', encoding='utf-8') as f:
+
+        with open(filepath, "r", encoding="utf-8") as f:
             config = json.load(f)
         print(f"✓ Successfully loaded configuration from '{filepath}'")
         return config
-    
+
     @staticmethod
     def validate_config(config: Dict) -> bool:
         """Validate that the configuration has all required sections."""
-        required_sections = ['bot_settings', 'intents']
-        
+        required_sections = ["bot_settings", "intents"]
+
         for section in required_sections:
             if section not in config:
                 raise ValueError(f"Missing required section '{section}'")
-        
-        required_intent_fields = ['name', 'patterns', 'responses']
-        for i, intent in enumerate(config['intents']):
+
+        required_intent_fields = ["name", "patterns", "responses"]
+        for i, intent in enumerate(config["intents"]):
             for fld in required_intent_fields:
                 if fld not in intent:
                     raise ValueError(f"Intent #{i} missing field '{fld}'")
-        
+
         print(f"✓ Configuration validated successfully")
         print(f"✓ Found {len(config['intents'])} intents")
         return True
@@ -130,139 +131,147 @@ class ConfigLoader:
 
 class AdvancedChatbot:
     """Advanced chatbot with JSON-based intent configuration."""
-    
-    def __init__(self, config_path: str = 'chatbot_intents.json', name: str = None):
+
+    def __init__(self, config_path: str = "chatbot_intents.json", name: str = None):
         """Initialize the chatbot with JSON configuration."""
-        print("\n" + "="*50)
+        print("\n" + "=" * 50)
         print("🤖 Initializing BERGEN TECH AI Chatbot")
-        print("="*50)
-        
+        print("=" * 50)
+
         self.config = ConfigLoader.load_config(config_path)
         ConfigLoader.validate_config(self.config)
-        
-        bot_settings = self.config.get('bot_settings', {})
-        self.name = name or bot_settings.get('default_name', 'BERGEN TECH AI')
-        self.exit_commands = bot_settings.get('exit_commands', ['quit', 'exit'])
-        
+
+        bot_settings = self.config.get("bot_settings", {})
+        self.name = name or bot_settings.get("default_name", "BERGEN TECH AI")
+        self.exit_commands = bot_settings.get("exit_commands", ["quit", "exit"])
+
         self.unknown_responses = {
-            'positive': bot_settings.get('unknown_response_positive', ["That's great!"]),
-            'negative': bot_settings.get('unknown_response_negative', ["I'm sorry to hear that."]),
-            'neutral': bot_settings.get('unknown_response_neutral', ["Interesting!"])
+            "positive": bot_settings.get(
+                "unknown_response_positive", ["That's great!"]
+            ),
+            "negative": bot_settings.get(
+                "unknown_response_negative", ["I'm sorry to hear that."]
+            ),
+            "neutral": bot_settings.get("unknown_response_neutral", ["Interesting!"]),
         }
-        
+
         SentimentAnalyzer.load_from_config(self.config)
-        
+
         self.intents = []
         self.context = ConversationContext()
         self._build_intents()
-        
-        print("="*50)
+
+        print("=" * 50)
         print("✓ Chatbot initialization complete!")
-        print("="*50 + "\n")
-    
+        print("=" * 50 + "\n")
+
     def _build_intents(self):
         """Build Intent objects from JSON configuration."""
-        for intent_data in self.config['intents']:
+        for intent_data in self.config["intents"]:
             action_func = None
-            action_type = intent_data.get('action_type')
-            
+            action_type = intent_data.get("action_type")
+
             # FIXED: Use factory methods instead of lambdas to avoid closure issues
-            if action_type == 'store_user_name':
+            if action_type == "store_user_name":
                 action_func = self._create_store_name_action()
-            elif action_type == 'calculate':
+            elif action_type == "calculate":
                 action_func = self._create_calculate_action()
-            
+
             intent = Intent(
-                name=intent_data['name'],
-                patterns=intent_data['patterns'],
-                responses=intent_data['responses'],
-                keywords=intent_data.get('keywords', []),
-                context_set=intent_data.get('context_set'),
-                context_required=intent_data.get('context_required'),
+                name=intent_data["name"],
+                patterns=intent_data["patterns"],
+                responses=intent_data["responses"],
+                keywords=intent_data.get("keywords", []),
+                context_set=intent_data.get("context_set"),
+                context_required=intent_data.get("context_required"),
                 action=action_func,
-                action_type=action_type
+                action_type=action_type,
             )
             self.intents.append(intent)
-        
+
         print(f"✓ Built {len(self.intents)} intent handlers")
-    
+
     def _create_store_name_action(self):
         """Factory method to create the store_user_name action."""
+
         def store_name_action(chatbot, match):
             if match and match.lastindex and match.lastindex >= 1:
                 name = match.group(1).title()
-                chatbot.context.set_user_data('name', name)
+                chatbot.context.set_user_data("name", name)
             return None  # Return None so normal response flow continues
+
         return store_name_action
-    
+
     def _create_calculate_action(self):
         """Factory method to create the calculate action."""
+
         def calculate_action(chatbot, match):
             return chatbot._calculate(match)
+
         return calculate_action
-    
+
     def _calculate(self, match) -> str:
         """Perform a mathematical calculation."""
         try:
             expression = match.group(1) if match.lastindex else match.group(0)
-            expression = re.sub(r'[^\d\+\-\*\/\.\(\)\s]', '', expression)
+            expression = re.sub(r"[^\d\+\-\*\/\.\(\)\s]", "", expression)
             result = eval(expression)
             return f"The result of {expression} is **{result}**"
         except Exception:
             return "I couldn't calculate that. Please use a format like '5 + 3' or '10 * 2'."
-    
+
     def _fill_template(self, response: str) -> str:
         """Replace placeholder variables in response templates."""
         replacements = {
-            '{bot_name}': self.name,
-            '{user_name}': self.context.get_user_data('name', 'friend'),
-            '{current_time}': datetime.now().strftime('%I:%M %p'),
-            '{current_date}': datetime.now().strftime('%A, %B %d, %Y'),
+            "{bot_name}": self.name,
+            "{user_name}": self.context.get_user_data("name", "friend"),
+            "{current_time}": datetime.now().strftime("%I:%M %p"),
+            "{current_date}": datetime.now().strftime("%A, %B %d, %Y"),
         }
-        
+
         for key, value in replacements.items():
             response = response.replace(key, value)
-        
+
         return response
-    
+
     def _score_intent(self, intent: Intent, text: str) -> float:
         """Calculate how well a user's text matches an intent."""
         score = 0.0
         text_lower = text.lower()
-        
+
         for pattern in intent.patterns:
             try:
                 if re.search(pattern, text_lower, re.IGNORECASE):
                     score += 2.0
             except re.error:
                 continue
-        
+
         text_words = set(text_lower.split())
         for keyword in intent.keywords:
             if keyword.lower() in text_words:
                 score += 0.5
-        
+
         if intent.context_required:
             if self.context.current_context == intent.context_required:
                 score += 1.0
             else:
                 score *= 0.5
-        
+
         return score
-    
+
     def classify_intent(self, text: str):
         """Find the best matching intent for user input."""
         best_intent = None
         best_score = 0.0
         best_match = None
-        
+
         for intent in self.intents:
             score = self._score_intent(intent, text)
-            
+
             if score > best_score:
                 best_score = score
                 best_intent = intent
-                
+
                 for pattern in intent.patterns:
                     try:
                         match = re.search(pattern, text.lower(), re.IGNORECASE)
@@ -271,40 +280,43 @@ class AdvancedChatbot:
                             break
                     except re.error:
                         continue
-        
+
         if best_score > 0.5:
             return best_intent, best_match
         return None, None
-    
+
     def get_response(self, user_input: str) -> str:
         """Generate a response to user input."""
         intent, match = self.classify_intent(user_input)
         sentiment = SentimentAnalyzer.analyze(user_input)
-        
+
         if intent:
             # Execute custom action if present
             if intent.action:
                 action_result = intent.action(self, match)
                 if action_result:
                     return self._fill_template(action_result)
-            
+
             # Pick a random response and fill templates
             response = random.choice(intent.responses)
             response = self._fill_template(response)
-            
+
             # Update context
             if intent.context_set:
                 self.context.set_context(intent.context_set)
             else:
                 self.context.clear_context()
-            
+
             return response
-        
+
         # Use sentiment-aware defaults
-        sentiment_type = sentiment['sentiment']
-        return random.choice(self.unknown_responses.get(sentiment_type, 
-                                                         self.unknown_responses['neutral']))
-    
+        sentiment_type = sentiment["sentiment"]
+        return random.choice(
+            self.unknown_responses.get(
+                sentiment_type, self.unknown_responses["neutral"]
+            )
+        )
+
     def chat(self):
         """Main interactive chat loop."""
         print(f"\n{'='*60}")
@@ -313,31 +325,31 @@ class AdvancedChatbot:
         print(f"  Type 'help' to see what I can do!")
         print(f"  Type 'stats' to see conversation statistics!")
         print(f"{'='*60}\n")
-        
+
         while True:
             try:
                 user_input = input("You: ").strip()
-                
+
                 if not user_input:
                     continue
-                
-                if user_input.lower() == 'stats':
+
+                if user_input.lower() == "stats":
                     self._show_stats()
                     continue
-                
+
                 response = self.get_response(user_input)
                 self.context.add_exchange(user_input, response)
                 print(f"\n{self.name}: {response}\n")
-                
+
                 if user_input.lower() in self.exit_commands:
                     break
-                    
+
             except KeyboardInterrupt:
                 print(f"\n\n{self.name}: Goodbye! Thanks for chatting! 👋")
                 break
             except Exception as e:
                 print(f"\n{self.name}: Oops, something went wrong. Let's continue!\n")
-    
+
     def _show_stats(self):
         """Display conversation statistics."""
         history = self.context.history
@@ -345,54 +357,62 @@ class AdvancedChatbot:
         print("📊 CONVERSATION STATISTICS")
         print(f"{'='*40}")
         print(f"Total exchanges: {len(history)}")
-        
+
         if history:
-            user_lengths = [len(h['user']) for h in history]
-            bot_lengths = [len(h['bot']) for h in history]
-            print(f"Avg user message length: {sum(user_lengths)/len(user_lengths):.0f} chars")
-            print(f"Avg bot response length: {sum(bot_lengths)/len(bot_lengths):.0f} chars")
-        
+            user_lengths = [len(h["user"]) for h in history]
+            bot_lengths = [len(h["bot"]) for h in history]
+            print(
+                f"Avg user message length: {sum(user_lengths)/len(user_lengths):.0f} chars"
+            )
+            print(
+                f"Avg bot response length: {sum(bot_lengths)/len(bot_lengths):.0f} chars"
+            )
+
         user_data = self.context.user_data
         if user_data:
             print(f"\nKnown about you:")
             for key, value in user_data.items():
                 print(f"  • {key}: {value}")
-        
+
         print(f"{'='*40}\n")
-    
+
     def get_conversation_history(self) -> list:
         """Return the complete conversation history."""
         return self.context.history
-    
-    def save_conversation(self, filepath: str = 'conversation_history.json'):
+
+    def save_conversation(self, filepath: str = "conversation_history.json"):
         """Save conversation history to a JSON file."""
         data = {
-            'session_start': self.context.session_start.isoformat(),
-            'session_end': datetime.now().isoformat(),
-            'bot_name': self.name,
-            'user_data': self.context.user_data,
-            'history': self.context.history
+            "session_start": self.context.session_start.isoformat(),
+            "session_end": datetime.now().isoformat(),
+            "bot_name": self.name,
+            "user_data": self.context.user_data,
+            "history": self.context.history,
         }
-        
-        with open(filepath, 'w', encoding='utf-8') as f:
+
+        with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        
+
         print(f"✓ Conversation saved to '{filepath}'")
 
 
 def main():
     """Run the advanced chatbot with JSON configuration."""
     try:
-        bot = AdvancedChatbot(config_path='chatbot_intents.json')
+        bot = AdvancedChatbot(config_path="chatbot_intents.json")
         bot.chat()
-        
+
         history = bot.get_conversation_history()
         if history:
             print(f"\n📝 Session had {len(history)} exchanges.")
-            save = input("Would you like to save this conversation? (y/n): ").strip().lower()
-            if save == 'y':
+            save = (
+                input("Would you like to save this conversation? (y/n): ")
+                .strip()
+                .lower()
+            )
+            if save == "y":
                 bot.save_conversation()
-                
+
     except FileNotFoundError as e:
         print(f"\n❌ Error: {e}")
         print("\nMake sure 'chatbot_intents.json' is in the same directory!")
