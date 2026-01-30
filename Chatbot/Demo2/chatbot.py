@@ -176,6 +176,9 @@ class AdvancedChatbot:
                 action_func = self._create_store_name_action()
             elif action_type == "calculate":
                 action_func = self._create_calculate_action()
+            elif action_type == "store_user_birthday":
+                action_func = self._create_store_birthday_action()
+
 
             intent = Intent(
                 name=intent_data["name"],
@@ -188,6 +191,7 @@ class AdvancedChatbot:
                 action_type=action_type,
             )
             self.intents.append(intent)
+            
 
         print(f"✓ Built {len(self.intents)} intent handlers")
 
@@ -226,7 +230,8 @@ class AdvancedChatbot:
             "{bot_name}": self.name,
             "{user_name}": self.context.get_user_data("name", "friend"),
             "{current_time}": datetime.now().strftime("%I:%M %p"),
-            "{current_date}": datetime.now().strftime("%A, %B %d, %Y"),
+            "{current_date}": datetime.now().strftime("%A, %B %d, %Y"), 
+            "{user_birthday}": self.context.get_user_data("birthday", "unknown"),
         }
 
         for key, value in replacements.items():
@@ -394,6 +399,15 @@ class AdvancedChatbot:
             json.dump(data, f, indent=2, ensure_ascii=False)
 
         print(f"✓ Conversation saved to '{filepath}'")
+    def _create_store_birthday_action(self):
+        """Store the user birthday."""
+        def store_birthday_action(chatbot, match):
+            if match and match.lastindex >= 1:
+                birthday = match.group(1).strip()
+                chatbot.context.set_user_data("birthday", birthday)
+            return None 
+        return store_birthday_action
+
 
 
 def main():

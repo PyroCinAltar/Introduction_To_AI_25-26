@@ -1,0 +1,20 @@
+{
+  "session_start": "2026-01-30T09:34:58.624894",
+  "session_end": "2026-01-30T09:35:36.867496",
+  "bot_name": "BERGEN TECH AI",
+  "user_data": {
+    "birthday": "march 15th"
+  },
+  "history": [
+    {
+      "timestamp": "2026-01-30T09:35:18.493741",
+      "user": "My birthday is march 15th",
+      "bot": "Great! march 15th is now saved. Happy early birthday! 🎉"
+    },
+    {
+      "timestamp": "2026-01-30T09:35:35.594600",
+      "user": "quit",
+      "bot": "Farewell! Come back anytime you want to chat!"
+    }
+  ]
+}
