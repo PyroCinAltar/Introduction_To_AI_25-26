@@ -122,6 +122,65 @@
             "has_action": false
         },
         {
+            "name": "greeting_spanish",
+            "description": "User greets the chatbot",
+            "patterns": [
+                "\\b(hola|buenos días)\\b",
+                "^(hola|buenos días)$",
+                "(buenos|buenas) (mañana|tardes|noches)"
+            ],
+            "keywords": [],
+            "responses": [
+                "¡Hola! ¿Cómo estás?"
+            ],
+            "context_set": null,
+            "context_required": null,
+            "has_action": false
+        },
+        {
+            "name": "greeting_french",
+            "description": "User greets the chatbot",
+            "patterns": [
+                "\\b(Bonjour|salut)\\b",
+                "^(Bonjour|salut)$"
+            ],
+            "keywords": [],
+            "responses": [
+                "Bonjour ! Comment ça va?"
+            ],
+            "context_set": null,
+            "context_required": null,
+            "has_action": false
+        },
+        {
+            "name": "greeting_chinese",
+            "description": "User greets the chatbot",
+            "patterns": [
+                "\\b(你好|嘿)\\b",
+                "^(你好|嘿)$"
+            ],
+            "keywords": [],
+            "responses": [
+                "你好，你最近怎么样？"
+            ],
+            "context_set": null,
+            "context_required": null,
+            "has_action": false
+        },
+        {
+            "name": "greeting_japanese",
+            "description": "User greets the chatbot",
+            "patterns": [
+                "\\b(こんにちは|おい)\\b",
+                "^(こんにちは|おい)$"
+            ],
+            "keywords": [],
+            "responses": ["こんにちは、お元気でしたか?"],
+            "context_set": null,
+            "context_required": null,
+            "has_action": false
+        },
+        {
             "name": "farewell",
             "description": "User says goodbye",
             "patterns": [
@@ -595,6 +654,59 @@
             ],
             "has_action": true,
             "action_type": "store_user_birthday"
+        },
+        {
+            "name": "save_note",
+            "description": "User asks the bot so save something",
+            "patterns": [
+                "remember that (.+)",
+                "note: (.+)",
+                "save note: (.+)"
+            ],
+            "responses": [
+                "Your note has been saved!"
+            ],
+            "has_action": true,
+            "action_type": "store_user_note"
+        },
+        {
+            "name": "show_notes",
+            "description": "Show all saved notes",
+            "patterns": [
+                "show my notes",
+                "what did i note",
+                "my notes"
+            ],
+            "responses": [
+                "Here are your notes: {notes}"
+            ],
+            "has_action": true,
+            "action_type": "show_user_notes"
+        },
+        {
+            "name": "add_reminder",
+            "description": "Add a reminder for the user",
+            "patterns": [
+                "remind me to (.+)"
+            ],
+            "responses": [
+                "Got it. The reminder has been added to the reminders list"
+            ],
+            "has_action": true,
+            "action_type": "add_reminder"
+        },
+        {
+            "name": "add_favorite",
+            "description": "Adds to a dictionary of what the user likes",
+            "patterns": [
+                "favorite (color|music|food|movie|band) is (.+)"
+            ],
+            "responses": [
+                "I now understand you better!",
+                "Thats very interesting!"
+            ],
+            "has_action": true,
+            "action_type": "add_favorites"
         }
     ]
 }

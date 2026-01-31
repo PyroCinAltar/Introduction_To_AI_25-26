@@ -11,6 +11,7 @@ import os
 from datetime import datetime
 from dataclasses import dataclass, field
 from typing import Optional, Callable, Dict, List, Any
+from collections import Counter
 
 @dataclass
 class Intent:
@@ -178,6 +179,13 @@ class AdvancedChatbot:
                 action_func = self._create_calculate_action()
             elif action_type == "store_user_birthday":
                 action_func = self._create_store_birthday_action()
+            elif action_type == "store_user_note":
+                action_func = self._create_save_note_action()
+            elif action_type == "show_user_notes":
+                action_func = self._create_show_notes_action()
+            elif action_type == "add_favorites":
+                action_func = self._create_store_favorites_action()
+
 
 
             intent = Intent(
@@ -378,6 +386,89 @@ class AdvancedChatbot:
             print(f"\nKnown about you:")
             for key, value in user_data.items():
                 print(f"  • {key}: {value}")
+            
+            
+        sentiment_scores = []
+        for exchange in self.context.history:
+            analysis = SentimentAnalyzer.analyze(exchange["user"])
+        sentiment_scores.append(analysis["score"])
+
+        avg = 0
+        if sentiment_scores:
+            try:
+                avg = round((sum(sentiment_scores)/len(sentiment_scores)), 2)
+            except ZeroDivisionError:
+                avg = 0
+            
+            print(f"Average Sentiment Score: {avg}")
+
+
+        #  Commonly used words(top 3)
+        word_counts = {}
+        for exchange in self.context.history:
+            words = re.findall(r"\b\w+\b", exchange["user"].lower())
+            for word in words:
+                if word in word_counts:
+                    word_counts[word] += 1
+                else:
+                    word_counts[word] = 1
+            
+        #Getting the top 3
+        top_3 = sorted(
+            word_counts.items(),
+            key=lambda item: item[1],
+            reverse=True
+            )[:3]
+        print("\n🗣️ MOST COMMON WORDS")
+        for word, count in top_3:
+            print(f"  • {word}: {count} times")
+        print()
+
+        # most Intent used (use a count, take first one)
+        #Tracking intent usage
+        intent_counts = {}
+
+        for exchange in self.context.history:
+            # Classify intent for this message
+            intent, match = self.classify_intent(exchange["user"])
+            if intent:
+                name = intent.name
+                if name in intent_counts:
+                    intent_counts[name] += 1
+                else:
+                    intent_counts[name] = 1
+        #finding most used intent
+        most_used_intent = None
+
+        if intent_counts:
+            # Sort by count descending, pick first one
+            most_used_intent = sorted(
+                intent_counts.items(),
+                key=lambda item: item[1],  # sort by count
+                reverse=True
+            )[0][0]  # get the name of the intent
+        
+
+
+
+        # Conversation duration
+        from datetime import datetime
+
+        start = self.context.session_start
+        end = datetime.now()
+
+        duration = end - start  # this is a timedelta object
+        
+        total_seconds = int(duration.total_seconds())
+        minutes, seconds = divmod(total_seconds, 60)
+        hours, minutes = divmod(minutes, 60)
+
+        print(f"⏱️ Conversation duration: {hours}h {minutes}m {seconds}s")
+
+        
+    
+
+
 
         print(f"{'='*40}\n")
 
@@ -399,6 +490,7 @@ class AdvancedChatbot:
             json.dump(data, f, indent=2, ensure_ascii=False)
 
         print(f"✓ Conversation saved to '{filepath}'")
+        
     def _create_store_birthday_action(self):
         """Store the user birthday."""
         def store_birthday_action(chatbot, match):
@@ -407,6 +499,66 @@ class AdvancedChatbot:
                 chatbot.context.set_user_data("birthday", birthday)
             return None 
         return store_birthday_action
+    
+    def _create_save_note_action(self):
+        def save_note_action(chatbot, match):
+            if match and match.lastindex >= 1:
+                note = match.group(1).strip()
+                notes = chatbot.context.get_user_data("notes") or []
+                notes.append(note)
+
+                chatbot.context.set_user_data("notes", notes)
+            return None
+
+        return save_note_action
+
+    
+    def _create_show_notes_action(self):
+        def show_notes_action(chatbot, match):
+            notes = chatbot.context.get_user_data("notes")
+
+            if not notes:
+                return "You don't have any saved notes yet."
+
+            formatted_notes = "\n".join(
+                [f"{i+1}. {note}" for i, note in enumerate(notes)]
+            )
+            return f"Here are your saved notes:\n{formatted_notes}"
+
+        return show_notes_action
+    
+    
+    def store_favorites(self, favorite_type: str, favorite_value: str):
+
+        favorites = self.context.get_user_data("favorites", {})
+
+        if favorite_type == "band":
+            favorite_type = "music"
+        
+
+        favorites[favorite_type] = favorite_value
+        
+
+        self.context.set_user_data("favorites", favorites)
+
+        self.context.set_user_data(f"favorite_{favorite_type}", favorite_value)
+
+    def _create_store_favorites_action(self):
+        def store_favorites_action(chatbot, match):
+            if match and match.lastindex >= 2:
+
+                favorite_type = match.group(1).strip().lower()
+
+                favorite_value = match.group(2).strip()
+                
+
+                chatbot.store_favorites(favorite_type, favorite_value)
+                
+                chatbot.context.set_user_data("favorite_type", favorite_type)
+            return None 
+        
+        return store_favorites_action
+
 
 
 
@@ -439,3 +591,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    

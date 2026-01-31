@@ -1,20 +1,42 @@
 {
-  "session_start": "2026-01-30T09:34:58.624894",
-  "session_end": "2026-01-30T09:35:36.867496",
+  "session_start": "2026-01-31T11:13:31.806895",
+  "session_end": "2026-01-31T11:14:56.008307",
   "bot_name": "BERGEN TECH AI",
   "user_data": {
-    "birthday": "march 15th"
+    "notes": [
+      "dogs"
+    ]
   },
   "history": [
     {
-      "timestamp": "2026-01-30T09:35:18.493741",
-      "user": "My birthday is march 15th",
-      "bot": "Great! march 15th is now saved. Happy early birthday! 🎉"
+      "timestamp": "2026-01-31T11:13:37.004314",
+      "user": "calculate 5+5",
+      "bot": "The result of 5+5 is **10**"
     },
     {
-      "timestamp": "2026-01-30T09:35:35.594600",
+      "timestamp": "2026-01-31T11:13:51.099009",
+      "user": "calculate 4*2",
+      "bot": "The result of 4*2 is **8**"
+    },
+    {
+      "timestamp": "2026-01-31T11:14:03.137151",
+      "user": "note 2+2",
+      "bot": "The result of 2+2 is **4**"
+    },
+    {
+      "timestamp": "2026-01-31T11:14:08.659309",
+      "user": "note dogs",
+      "bot": "Hmm, I'm not quite sure what you mean. Try asking differently?"
+    },
+    {
+      "timestamp": "2026-01-31T11:14:12.477451",
+      "user": "note: dogs",
+      "bot": "Your note has been saved!"
+    },
+    {
+      "timestamp": "2026-01-31T11:14:53.222348",
       "user": "quit",
-      "bot": "Farewell! Come back anytime you want to chat!"
+      "bot": "See you later! Take care!"
     }
   ]
 }
