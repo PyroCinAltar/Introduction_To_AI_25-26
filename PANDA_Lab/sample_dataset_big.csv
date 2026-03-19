@@ -1,0 +1,184 @@
+Student_ID,Grade_Level,Study_Hours_Per_Week,Sleep_Hours_Per_Night,Attendance_Rate,Club,Device_Type,Avg_Assignment_Score,Missing_Assignments,AI_Tool_Used,Internet_Access,Commute_Minutes
+S001,11,8.2,7.2,93.6,None,chromebook,99.1,3,Magic School,Yes,21
+S002,10,7.0,8.5,95.9,None,chromebook,84.1,1,None,,22
+S003,12,6.6,6.2,87.7,art club,,86.8,2,chatgpt,No,29
+S004,12,3.3,5.6,91.1,Soccer,Laptop,70.7,0,none,Y,17
+S005,10,9.4,7.8,94.5,art club,,55,3,none,YES,30
+S006,11,6.9,8.0,100.0,music,chromebook,77.4,4,Gemini,no,41
+S007,11,9.6,6.9,83.5,Robotics,Chromebook,77.7,4,Magic School,No,4
+S008,10,8.9,6.1,91.2,soccer,Tablet,76.2,4,Gemini,No,13
+S009,10,6.4,5.4,91.9,music,Tablet,72.4,0,Gemini,Y,55
+S010,11,6.7,4.4,94.0,None,Tablet,87.8,0,,Y,17
+S011,11,-1,6.0,90.7,Music,,78.5,2,chatgpt,No,41
+S012,11,1.3,7.9,95.3,Music,,77.5,4,None,,48
+S013,11,5.5,6.5,92.6,Music,Laptop,70.6,0,chatgpt,No,16
+S014,12,7.4,6.0,100,robotics,Laptop,90.3,2,Gemini,YES,2
+S015,11,7.7,6.7,83.9,art club,laptop,80.6,2,None,no,6
+S016,12,5.1,5.9,89.0,art club,Laptop,82.4,1,Copilot,Y,38
+S017,10,9.3,7.8,93.7,debate,Laptop,100,0,,YES,23
+S018,11,5.7,4.3,88.0,soccer,,79.6,1,Magic School,No,27
+S019,11,3.0,7.4,84.0,robotics,Laptop,57.5,1,chatgpt,YES,30
+S020,10,5.3,6.8,94.7,robotics,Tablet,93.2,3,chatgpt,Yes,2
+S021,11,6.1,6.9,100,art club,Chromebook,150,0,Magic School,Yes,32
+S022,10,8.7,7.0,100,Debate,Tablet,75.2,1,,YES,6
+S023,10,6.7,7.4,91.8,debate,Laptop,79.5,4,Gemini,Yes,28
+S024,12,7.7,7.4,84.6,art club,Tablet,74.6,5,Copilot,Y,41
+S025,11,4.8,6.1,85.7,Debate,Chromebook,76.9,1,None,no,15
+S026,10,5.0,5.9,100,Robotics,Tablet,72.9,0,chatgpt,Yes,13
+S027,11,5.3,7.0,90.7,art club,Desktop,86.1,2,None,Y,37
+S028,12,7.4,5.5,88.2,None,Laptop,71.9,3,chatgpt,Yes,22
+S029,12,7.5,7.9,93.3,None,chromebook,91.9,3,None,,13
+S030,10,3.8,5.2,97.2,Art Club,chromebook,85.5,3,,Y,23
+S031,12,5.5,6.8,100,Art Club,laptop,77.8,4,Gemini,no,27
+S032,10,4.8,9.6,95.4,debate,,64.0,1,none,,8
+S033,11,10.7,4.5,92.0,art club,,60.2,4,Gemini,no,42
+S034,10,6.3,5.8,100,,,75.4,2,chatgpt,no,31
+S035,12,7.5,6.3,94.7,Debate,,72.9,2,ChatGPT,N,16
+S036,10,4.4,9.3,96.7,None,laptop,81.3,0,none,Yes,44
+S037,10,7.9,6.8,96.6,robotics,laptop,81.2,0,none,no,32
+S038,11,4.3,6.9,,,Tablet,79.5,7,Copilot,No,24
+S039,11,11.2,6.1,85.7,robotics,chromebook,72.7,4,Magic School,No,16
+S040,11,6.2,7.7,79.5,None,chromebook,94.4,4,None,no,14
+S041,11,8.3,7.0,84.9,None,Desktop,88.6,0,Copilot,Y,27
+S042,11,9.7,5.7,93.2,Music,chromebook,86.7,1,Copilot,N,16
+S043,11,6.9,6.3,100,music,,91.2,2,Copilot,N,11
+S044,11,4.9,7.0,91.6,robotics,,82.1,1,,Yes,27
+S045,11,7.5,6.7,96.5,Music,laptop,91.3,0,,Y,7
+S046,12,8.3,6.1,97.4,Art Club,chromebook,77.0,3,Copilot,,14
+S047,11,6.8,5.4,88.6,robotics,chromebook,77.3,2,none,Y,33
+S048,10,7.8,8.0,94.4,Soccer,Tablet,88.7,1,ChatGPT,YES,36
+S049,12,3.6,8.4,93.1,music,Tablet,82.3,0,None,,28
+S050,11,9.7,5.4,82.5,music,Chromebook,79.1,0,,Yes,25
+S051,11,4.6,5.0,90.1,Art Club,laptop,64.1,0,ChatGPT,Yes,18
+S052,11,8.1,8.1,97.6,art club,Tablet,86.0,-2,Magic School,No,42
+S053,12,7.3,6.1,93.0,Music,Laptop,84.0,4,chatgpt,,24
+S054,12,7.0,,92.2,music,Chromebook,100,2,chatgpt,Y,38
+S055,12,4.8,7.2,86.4,,chromebook,93.0,5,None,Maybe,39
+S056,11,9.1,6.3,96.9,,Chromebook,77.7,5,Copilot,Yes,32
+S057,11,5.4,8.9,95.7,music,,66.2,4,none,Yes,28
+S058,11,4.2,9.1,93.2,debate,chromebook,78.8,4,Gemini,no,16
+S059,10,3.3,6.7,81.9,soccer,Tablet,68.1,0,None,No,32
+S060,12,7.0,6.5,95.3,soccer,laptop,77.9,0,ChatGPT,no,17
+S061,12,7.1,7.8,93.6,music,chromebook,74.3,4,Copilot,Yes,14
+S062,10,4.2,7.9,92.4,,Tablet,94.3,2,None,YES,25
+S063,11,6.6,8.9,86.8,debate,Tablet,92.3,5,none,N,24
+S064,11,5.9,7.9,91.1,,laptop,74.4,5,Copilot,YES,18
+S065,12,6.0,8.7,92.5,robotics,,69.5,2,Gemini,No,32
+S066,10,4.8,6.8,105,,Chromebook,81.0,0,chatgpt,,9
+S067,10,6.0,8.4,83.6,Debate,,100,0,Magic School,no,27
+S068,10,6.0,6.7,96.6,Debate,Laptop,93.4,3,Magic School,Y,24
+S069,11,3.7,5.5,82.4,Debate,,97.9,0,ChatGPT,Y,17
+S070,12,9.5,8.3,88.7,robotics,Chromebook,77.4,2,Gemini,Yes,39
+S071,11,5.6,5.6,96.8,,chromebook,84.7,2,Copilot,No,20
+S072,12,4.2,5.6,97.8,Music,Chromebook,78.7,0,Gemini,Yes,3
+S073,10,7.3,5.3,98.1,soccer,Laptop,62.9,0,Magic School,No,26
+S074,11,5.6,,98.2,debate,laptop,85.6,2,ChatGPT,,29
+S075,11,6.4,7.4,,None,Tablet,71.7,3,Magic School,N,20
+S076,12,8.9,6.7,87.6,robotics,,87.8,3,,No,34
+S077,11,3.5,8.3,94.5,Debate,Desktop,84.0,5,ChatGPT,N,38
+S078,12,5.8,7.1,83.7,soccer,chromebook,81.4,1,None,Y,25
+S079,10,5.4,9.6,90.6,None,laptop,83.2,3,None,Y,6
+S080,10,5.2,7.5,93.6,robotics,chromebook,78.9,3,None,Y,12
+S081,12,4.3,7.8,85.5,Art Club,Tablet,84.9,3,Gemini,,39
+S082,10,7.1,,86.3,Debate,,97.9,5,,,24
+S083,10,4.5,6.7,84.9,soccer,Desktop,79.0,6,Copilot,Y,0
+S084,11,7.9,5.9,89.2,Soccer,Tablet,93.3,6,Gemini,no,22
+S085,12,10.5,9.4,90.6,soccer,Laptop,87.0,0,Gemini,no,22
+S086,12,7.4,6.9,92.9,music,chromebook,75.3,1,none,,27
+S087,11,1.2,6.3,83.2,soccer,,68.1,0,Copilot,N,20
+S088,11,6.1,7.9,100,None,chromebook,97.9,4,None,Yes,15
+S089,10,7.0,6.0,,Music,Tablet,87.0,0,Gemini,YES,15
+S090,10,8.6,5.7,92.8,,Chromebook,100,1,None,N,26
+S091,10,8.1,4.4,90.5,soccer,Desktop,77.7,4,Magic School,N,23
+S092,11,7.3,6.3,86.8,art club,Tablet,90.6,0,None,Yes,17
+S093,12,5.5,6.1,83.6,,Laptop,76.9,5,None,,13
+S094,12,4.9,6.2,86.5,None,,72.5,1,Gemini,N,7
+S095,10,6.1,6.7,92.4,debate,chromebook,80.5,5,none,N,43
+S096,11,7.7,9.2,96.1,Music,Desktop,76.3,3,,,16
+S097,11,9.2,5.3,89.7,art club,,83.8,1,Magic School,,8
+S098,12,3.9,8.7,99.4,soccer,,84.1,1,Magic School,,8
+S099,11,4.2,8.4,83.8,Music,Desktop,85.5,3,chatgpt,N,20
+S100,12,8.1,6.4,89.2,Robotics,Desktop,86.0,3,Copilot,Y,24
+S101,10,3.4,7.6,91.4,Soccer,laptop,58.9,2,Magic School,N,17
+S102,10,4.3,7.1,,debate,Chromebook,82.2,0,none,Yes,34
+S103,12,3.3,9.1,90.7,Debate,Chromebook,80.2,7,,Yes,18
+S104,11,4.6,5.6,100,art club,Chromebook,85.4,2,Copilot,Y,16
+S105,10,7.8,6.2,99.7,Robotics,Desktop,100,3,Gemini,Y,19
+S106,11,8.0,8.7,93.0,art club,laptop,83.3,1,ChatGPT,YES,31
+S107,12,2.9,6.6,81.7,Music,laptop,85.6,4,ChatGPT,N,33
+S108,12,8.3,5.8,77.1,Robotics,Tablet,89.7,3,chatgpt,no,14
+S109,12,2.1,8.0,90.5,Art Club,Desktop,88.1,0,none,no,13
+S110,12,4.1,6.7,89.8,,Laptop,80.2,4,Copilot,no,10
+S111,11,6.8,8.2,86.0,robotics,Desktop,86.0,0,none,YES,32
+S112,11,5.6,7.1,97.5,,chromebook,88.4,1,ChatGPT,Y,29
+S113,12,3.5,6.3,81.7,Soccer,,93.8,3,None,Y,22
+S114,11,8.6,7.9,105,robotics,Desktop,92.5,3,None,Y,15
+S115,10,4.0,7.7,92.9,None,chromebook,69.1,0,None,Yes,18
+S116,10,5.9,5.9,91.6,Art Club,laptop,83.9,2,ChatGPT,Yes,20
+S117,12,7.0,8.3,88.9,,Desktop,91.1,2,chatgpt,Yes,9
+S118,10,6.5,6.6,97.7,Soccer,Tablet,88.3,0,Copilot,,16
+S119,11,5.9,7.5,88.5,Music,chromebook,70.9,1,ChatGPT,Yes,32
+S120,10,10.0,6.3,92.4,robotics,Laptop,74.8,0,Gemini,no,24
+S121,11,6.9,8.6,89.2,Soccer,,74.9,2,,Yes,11
+S122,12,3.9,6.2,90.4,robotics,Tablet,72.9,4,,,25
+S123,11,5.0,8.1,97.0,,laptop,89.6,6,none,YES,36
+S124,11,7.8,8.4,97.4,debate,Desktop,90.8,1,Gemini,YES,2
+S125,10,6.4,7.8,97.8,robotics,Chromebook,96.8,5,,,19
+S126,11,3.6,,98.4,music,Desktop,73.3,4,Gemini,no,11
+S127,10,4.8,7.4,91.7,Music,Laptop,86.4,1,ChatGPT,No,36
+S128,12,10.4,8.2,97.1,Music,Tablet,72.1,0,ChatGPT,no,28
+S129,12,5.2,6.6,86.4,Robotics,Tablet,75.8,5,none,N,40
+S130,10,6.1,6.7,87.2,Music,laptop,55,1,None,no,17
+S131,11,4.9,8.5,94.1,robotics,Desktop,69.0,4,None,No,34
+S132,12,3.8,4.6,95.8,music,chromebook,76.6,3,Magic School,YES,33
+S133,11,8.3,6.6,84.4,Art Club,chromebook,95.4,1,chatgpt,N,0
+S134,11,6.1,7.0,86.7,debate,,100,1,Gemini,YES,25
+S135,10,7.1,6.5,93.5,Music,Laptop,64.2,0,Gemini,Y,3
+S136,11,8.7,9.1,93.4,Art Club,chromebook,65.0,0,Copilot,no,29
+S137,11,6.6,4.7,92.4,soccer,,90.4,3,,no,41
+S138,12,7.0,5.5,88.9,art club,,85.9,-2,ChatGPT,N,9
+S139,11,3.0,9.2,90.3,robotics,Desktop,71.3,3,,Y,28
+S140,10,1.6,8.2,93.1,debate,,93.8,0,none,YES,30
+S141,11,7.9,7.5,90.9,,chromebook,87.1,1,ChatGPT,No,30
+S142,12,2.4,7.4,92.4,music,Laptop,71.8,2,Copilot,,23
+S143,10,9.3,6.3,82.8,art club,Desktop,91.0,3,,Yes,30
+S144,10,9.0,6.0,99.2,,chromebook,84.2,3,none,YES,34
+S145,11,7.8,8.8,86.4,Music,laptop,81.6,0,ChatGPT,no,22
+S146,12,8.6,7.3,85.0,debate,,94.9,3,chatgpt,,28
+S147,11,6.5,6.3,88.7,None,,90.3,3,,N,8
+S148,10,8.8,8.5,93.5,art club,Laptop,82.0,3,none,No,0
+S149,11,9.2,6.9,91.8,art club,Desktop,99.7,0,none,No,40
+S150,10,3.4,9.0,91.5,Soccer,Desktop,61.8,4,,No,22
+S151,12,2.6,6.7,91.7,music,,79.0,3,chatgpt,Yes,33
+S152,11,5.8,8.4,91.3,soccer,Desktop,77.1,0,none,Y,30
+S153,12,5.6,10.6,94.2,None,Tablet,81.7,0,Gemini,Yes,40
+S154,10,3.5,5.6,94.2,None,Desktop,83.8,0,ChatGPT,Y,46
+S155,10,4.5,7.4,89.7,Art Club,laptop,84.4,1,None,YES,32
+S156,12,7.9,7.1,78.8,robotics,Desktop,80.5,2,Copilot,Y,6
+S157,11,8.7,6.2,100,soccer,Chromebook,96.6,4,chatgpt,,16
+S158,11,7.6,6.1,90.7,Music,Desktop,86.0,5,Gemini,,9
+S159,11,7.5,10.7,93.2,soccer,Laptop,75.9,0,,,36
+S160,12,9.6,9.0,97.5,,chromebook,87.0,0,Magic School,,26
+S161,11,7.9,7.8,98.0,Music,Desktop,88.0,5,Gemini,,40
+S162,12,2.1,8.2,94.9,Art Club,Desktop,84.8,3,Copilot,No,33
+S163,12,4.7,6.9,95.5,Music,Desktop,86.1,3,chatgpt,Y,31
+S164,11,4.1,6.1,96.0,music,Desktop,95.3,3,ChatGPT,Yes,11
+S165,10,4.7,5.7,86.0,Soccer,laptop,150,0,None,N,13
+S166,12,2.5,7.3,90.0,robotics,chromebook,75.3,4,,no,29
+S167,10,5.0,6.3,90.1,debate,Tablet,67.0,3,chatgpt,No,32
+S168,10,8.2,8.0,93.2,Soccer,,85.5,1,Gemini,,18
+S169,11,4.8,6.5,92.6,Music,Tablet,71.3,0,ChatGPT,Yes,24
+S170,12,0.8,6.9,93.2,Robotics,Desktop,92.1,0,,No,25
+S171,11,-1,5.9,99.2,Soccer,Desktop,72.1,3,Copilot,No,25
+S172,11,8.8,7.7,92.4,music,chromebook,74.9,1,chatgpt,no,20
+S173,11,9.3,6.9,89.8,music,laptop,87.2,2,ChatGPT,YES,26
+S174,12,7.4,5.5,99.5,Art Club,Desktop,100,4,Magic School,Y,20
+S175,12,5.9,8.1,95.5,,laptop,72.1,1,none,Maybe,45
+S176,11,9.4,6.8,94.8,,chromebook,67.6,4,Copilot,N,26
+S177,10,3.8,,90.1,Soccer,Chromebook,66.0,3,chatgpt,YES,16
+S178,10,6.0,7.7,89.7,music,Tablet,73.4,4,ChatGPT,N,10
+S179,10,7.0,8.1,88.2,debate,Chromebook,72.6,0,none,N,28
+S180,12,5.9,5.2,89.1,,Chromebook,70.1,2,None,,34
+S015,11,7.7,6.7,83.9,art club,laptop,80.6,2,None,no,6
+S078,12,5.8,7.1,83.7,soccer,chromebook,81.4,1,None,Y,25
+S121,11,6.9,8.6,89.2,Soccer,,74.9,2,,Yes,11
