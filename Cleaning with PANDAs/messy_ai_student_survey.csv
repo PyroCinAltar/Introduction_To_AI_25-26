@@ -1,0 +1,16 @@
+StudentID,Name,Age,Grade,State,Favorite_AI_Topic,Hours_Online
+1001,Amira Patel,17,11,New Jersey,computer vision,3.5
+1002,Noah Kim,16,11,new jersey,natural language processing,4.0
+1003,Sofia Lopez,,12,NJ,Robotics,2.5
+1004,Ethan Brown,17,11, New Jersey ,machine learning,5.0
+1005,Mia Chen,250,12,New Jersey,Data Science,3.0
+1006,Liam Davis,16,11,new jersey ,robotics,4.5
+1007,Olivia Smith,17,Grade 12,New Jersey,Computer Vision,3.8
+1008,Jayden Wilson,18,12,new jersey,NATURAL LANGUAGE PROCESSING,2.9
+1009,Emma Garcia,17,11,NJ,Machine Learning,3.2
+1010,Lucas Martinez,,12,New Jersey,robotics,4.1
+1011,Ava Johnson,16,11,New jersey,Data science,3.7
+1011,Ava Johnson,16,11,New jersey,Data science,3.7
+1012,Isabella Lee,17,grade 11,new jersey,Computer vision,3.4
+1013,Mason Clark,15,11,NJ ,machine learning,2.8
+1014,Harper Lewis,16,12,New Jersey, data science ,3.1
