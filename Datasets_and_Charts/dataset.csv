@@ -1,0 +1,25 @@
+RecordID,Category,Day,Value,StudyHours,Score,SleepHours,FocusLevel
+1,Chatbot,1,12,0.5,58,5.5,4
+2,Coding Assistant,2,13,1.0,61,6.0,5
+3,Image Generator,3,14,1.0,60,5.0,4
+4,Data Analysis,4,15,1.5,64,6.5,6
+5,Chatbot,5,17,1.5,66,6.0,6
+6,Coding Assistant,6,16,2.0,69,6.5,6
+7,Image Generator,7,18,2.0,70,7.0,7
+8,Chatbot,8,19,2.5,72,6.5,7
+9,Data Analysis,9,21,2.5,74,7.0,7
+10,Coding Assistant,10,20,3.0,76,7.5,8
+11,Chatbot,11,22,3.0,78,7.0,8
+12,Image Generator,12,24,3.5,80,7.5,8
+13,Data Analysis,13,23,3.5,81,8.0,8
+14,Chatbot,14,25,4.0,84,7.5,8
+15,Coding Assistant,15,27,4.0,86,8.0,9
+16,Image Generator,16,26,4.5,87,8.5,9
+17,Chatbot,17,28,4.5,89,8.0,9
+18,Data Analysis,18,29,5.0,91,8.5,9
+19,Coding Assistant,19,31,5.0,92,8.0,9
+20,Chatbot,20,30,5.5,94,8.5,10
+21,Image Generator,21,32,5.5,95,9.0,10
+22,Data Analysis,22,33,6.0,97,8.5,10
+23,Chatbot,23,35,6.0,98,9.0,10
+24,Coding Assistant,24,34,6.5,99,9.0,10
