@@ -1,0 +1,27 @@
+Student ID,Grade Level,Gender,Program Area,Prior Coding Experience,Leadership in School Club,Approved for Tech Internship
+S001,12,Male,Computer Science,Yes,Yes,Yes
+S002,12,Male,Computer Science,Yes,No,Yes
+S003,12,Male,Computer Science,Yes,Yes,Yes
+S004,12,Male,Computer Science,No,Yes,Yes
+S005,12,Male,Computer Science,Yes,No,Yes
+S006,12,Male,Engineering,Yes,No,Yes
+S007,12,Male,Engineering,Yes,Yes,Yes
+S008,12,Male,Engineering,No,Yes,Yes
+S009,12,Male,Computer Science,Yes,Yes,Yes
+S010,12,Male,Computer Science,No,No,Yes
+S011,12,Male,Computer Science,Yes,Yes,Yes
+S012,12,Male,Engineering,Yes,No,Yes
+S013,12,Male,Business,Yes,Yes,No
+S014,11,Male,Computer Science,Yes,No,Yes
+S015,11,Male,Engineering,No,Yes,No
+S016,12,Male,Computer Science,Yes,Yes,Yes
+S017,12,Female,Design,Yes,Yes,No
+S018,12,Female,Design,No,Yes,No
+S019,11,Female,Business,Yes,Yes,No
+S020,11,Female,Computer Science,Yes,No,No
+S021,12,Female,Engineering,Yes,Yes,Yes
+S022,11,Female,Design,No,No,No
+S023,12,Female,Computer Science,No,Yes,No
+S024,11,Nonbinary,Design,Yes,Yes,No
+S025,12,Female,Engineering,No,No,No
+S026,11,Male,Design,Yes,Yes,No
