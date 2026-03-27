@@ -1,0 +1,131 @@
+Student_ID,Grade_Level,Gender,Study_Hours_Per_Week,Screen_Time_Hours_Per_Day,Favorite_App_Category,AI_Tool_Used,Assignments_Missed,Avg_Score,Club,Commute_Minutes
+S1001,12,,10.2,4.4,gaming,ChatGPT,2,85.3,robotics,45.0
+S1017,10,Prefer not to say,5.0,3.6,social media,chatgpt,0,150.0,Debate,40.0
+S1050,11,Prefer not to say,1.2,6.3,education,none,two,83.2,robotics,35.0
+S1003,11,Male,8.5,6.3,gaming,MagicSchool,1,80.6,robotics,20.0
+S1010,10,Female,3.0,7.8,Productivity,Perplexity,4,79.4,none,30.0
+S1066,10,Female,9.1,6.7,Education,None,0,85.0,Drama,45.0
+S1116,10,Female,6.0,4.6,social media,,0,74.5,Soccer,30.0
+S1093,11,Female,4.6,1.2,GAMING,none,3,69.2, Robotics ,15.0
+S1031,11,Female,5.0,3.7,social media,Copilot,two,83.0,Drama,15.0
+S1108,11,Female,4.3,4.5,social media, chatgpt ,1,89.3,Robotics,15.0
+S1078,12,Nonbinary,2.9,2.5,Social Media,,1,72.4,Debate,15.0
+S1057,12,Nonbinary,3.4,5.2,productivity,MagicSchool,3,76.1,Soccer,5.0
+S1096,12,Female,8.3,5.1,Education,None,1,74.4,Robotics,40.0
+S1107,10,Female,3.2,4.6,ai tools,Perplexity,0,81.9,STEM Club,50.0
+S1043,11,Prefer not to say,3.3,3.7,Education, copilot ,1,83.5,Art,45.0
+S1112,10,Male,7.3,4.5,music,Perplexity,3,-10.0,robotics,40.0
+S1007,11,Male,5.9,2.6,Music, none ,1,63.7,,60.0
+S1070,11,Prefer not to say,ten,4.4,social media,Copilot,0,89.2,,25.0
+S1102,11,Female,6.3,2.3,gaming,,4,76.4,Robotics,35.0
+S1030,12,Prefer not to say,ten,4.4,social media,NotebookLM,1,96.0,,35.0
+S1120,12,Prefer not to say,9.0,3.1,Productivity,NotebookLM,2,74.1,robotics,45.0
+S1087,10,Female,3.2,4.1,video,NotebookLM,2,88.2,STEM Club,60.0
+S1088,11,Nonbinary,10.1,3.9,, chatgpt ,5,97.9,Debate,5.0
+S1036,11,Male,4.2,-1.0,AI Tools,NotebookLM,1,73.0,Drama,40.0
+S1115,10,Nonbinary,10.8,0.5,education,ChatGPT,1,84.5,Music,60.0
+S1106,11,Male,4.3,2.7,AI Tools,Perplexity,2,76.1,,35.0
+S1016,10,Nonbinary,5.1,1.8,Gaming,none,2,95.6,Music,40.0
+S1067,10,Prefer not to say,9.7,5.3,productivity,Copilot,17,84.5,,25.0
+S1064,11,Female,5.5,6.0,video,ChatGPT,2,89.8,robotics,
+S1091,10,Prefer not to say,,7.0,music,NotebookLM,1,83.8,STEM Club,35.0
+S1023,12,Prefer not to say,9.8,6.4,productivity,None,3,87.4,Soccer,35.0
+S1022,12,Prefer not to say,5.5,4.1,ai tools,NotebookLM,1,92.4,robotics,15.0
+S1027,12,Nonbinary,7.2,4.2,Social Media,Gemini,4,83.3,none,45.0
+S1053,11,Prefer not to say,4.9,4.9, music ,none,0,79.5,Soccer,45.0
+S1061,11,,5.7,1.8,SOCIAL MEDIA,Gemini,4,82.2, Drama ,50.0
+S1029,10,Male,8.6,6.2,Productivity,Perplexity,0,83.5,none,35.0
+S1055,10,Female,4.5,5.3,gaming,Copilot,2,86.7,Art,5.0
+S1037,12,Nonbinary,2.9,4.3, social media ,Gemini,1,75.4,robotics,30.0
+S1052,11,Male,5.1,6.6,SOCIAL MEDIA,,2,88.5,Drama,60.0
+S1063,10,Prefer not to say,5.7,2.7,education,chatgpt,2,80.2,STEM Club,5.0
+S1040,12,Male,2.1,6.6,Education,,3,89.8,STEM Club,
+S1073,11,Female,2.6,6.8,SOCIAL MEDIA,MagicSchool,2,N/A,STEM Club,35.0
+S1061,11,,5.7,1.8,SOCIAL MEDIA,Gemini,4,82.2,Drama,50.0
+S1084,12,Prefer not to say,4.3,2.8, ai tools ,None,2,70.5,Music,15.0
+S1021,12,Male,55.0,6.8,Video,None,2,N/A,Soccer,20.0
+S1059,10,Prefer not to say,8.4,5.4,AI Tools,Perplexity,2,91.4,Soccer,45.0
+S1094,11,Male,,8.4,music,None,2,72.5,none,15.0
+S1086,11,Female,10.5,3.3,ai tools,None,0,76.8,,200.0
+S1113,12,Male,8.7,0.5,AI Tools,None,1,74.1,Art,20.0
+S1012,10,Female,1.7,2.0, social media ,,2,100.0,Debate,45.0
+S1042,10,Nonbinary,7.2,7.2,music,Copilot,1,86.7,Music,20.0
+S1032,11,Nonbinary,5.8,6.6,Music,ChatGPT,2,84.9,robotics,5.0
+S1076,12,Male,6.8,4.9,gaming,none,0,,STEM Club,50.0
+S1112,10,Male,7.3,4.5,music,Perplexity,3,-10.0,robotics,40.0
+S1114,11,Prefer not to say,5.7,3.9,Productivity,MagicSchool,1,87.5,robotics,40.0
+S1074,12,Prefer not to say,9.2,3.5,Video,none,1,N/A,None,10.0
+S1096,12,Female,8.3,5.1,Education,None,1,74.4,Robotics,40.0
+S1089,11,Male,5.5,1.1,Education,Perplexity,2,82.6,STEM Club,20.0
+S1079,12,Nonbinary,9.4,5.8,gaming,Gemini,1,77.1,STEM Club,45.0
+S1047,11,Prefer not to say,6.3,1.9,Video,none,0,87.8,Art,40.0
+S1048,10,Male,5.4,7.2,Productivity,none,2,76.0,,10.0
+S1105,10,,5.1,4.1,SOCIAL MEDIA,None,2,59.9,Music,60.0
+S1118,12,Male,6.2,4.8,Productivity,None,3,82.9,,10.0
+S1062,10,Male,7.8,3.1,productivity,ChatGPT,4,77.3,None,60.0
+S1019,10,Prefer not to say,6.3,7.8,video,MagicSchool,4,80.3,,30.0
+S1100,12,Male,6.1,6.1,Productivity,None,4,90.6,STEM Club,60.0
+S1103,11,Nonbinary,7.7,4.4,video,Copilot,3,92.5,robotics,50.0
+S1102,11,Female,6.3,2.3,gaming,,4,76.4,Robotics,35.0
+S1039,11,Nonbinary,5.5,6.5,SOCIAL MEDIA,Perplexity,3,95.7,Robotics,45.0
+S1026,11,Female,3.8,5.9,Social Media,NotebookLM,2,70.5,Music,15.0
+S1020,11,Prefer not to say,6.8,6.5,,Gemini,2,67.8,Music,10.0
+S1117,12,Nonbinary,7.8,7.1,Music,,2,75.3,Soccer,5.0
+S1069,11,Prefer not to say,7.2,3.9,Productivity,none,3,89.5,robotics,60.0
+S1009,12,Male,1.9,6.2,productivity, chatgpt ,0,76.7,Music,5.0
+S1004,11,Prefer not to say,7.3,4.7,Social Media,,1,70.4,robotics,20.0
+S1111,12,Nonbinary,-3.0,6.6,Social Media,NotebookLM,5,75.4,robotics,45.0
+S1060,11,Male,8.9,4.6,AI Tools,NotebookLM,1,84.3,Soccer,50.0
+S1051,12,Prefer not to say,1.8,7.0,Education,chatgpt,0,71.3,Soccer,15.0
+S1006,11,Male,10.1,25.0,productivity,Gemini,1,98.2,Debate,35.0
+S1054,10,Female,7.5,4.7,Social Media,ChatGPT,2,77.4,,10.0
+S1006,11,Male,10.1,25.0,productivity,Gemini,1,98.2,Debate,35.0
+S1119,10,Female,4.4,5.5,music, notebooklm ,0,88.6,Debate,45.0
+S1041,11,Nonbinary,3.7,5.9,education,Copilot,4,70.0,STEM Club,45.0
+S1099,12,,3.8,4.7, Gaming ,Gemini,0,89.8,Robotics,30.0
+S1098,12,Nonbinary,7.0,5.0,productivity,none,2,88.3,Art,5.0
+S1049,10,Male,8.7,3.7,AI TOOLS,MagicSchool,0,98.5, Art ,40.0
+S1008,11,Male,ten,4.5,Music,,1,90.6,,20.0
+S1015,11,Prefer not to say,2.4,6.1,gaming,ChatGPT,2,91.5,,10.0
+S1045,12,Nonbinary,8.4,6.2,Video,,0,87.3,None,40.0
+S1095,11,Male,2.3,7.3,music,MagicSchool,2,86.3,STEM Club,60.0
+S1058,10,Nonbinary,5.9,6.5,ai tools,NotebookLM,2,77.8,,50.0
+S1011,12,Prefer not to say,8.1,4.9,Gaming,None,3,76.0,Art,15.0
+S1090,10,Prefer not to say,0.3,5.3,Video,NotebookLM,2,75.7,robotics,
+S1101,11,Female,5.8,6.6,productivity,ChatGPT,0,85.5,robotics,25.0
+S1028,12,Nonbinary,10.3,4.4,SOCIAL MEDIA, perplexity ,1,84.4,Music,60.0
+S1024,10,Nonbinary,6.0,5.1,,MagicSchool,1,81.6,None,60.0
+S1097,11,Female,0.0,2.5,video,NotebookLM,2,80.6,Robotics,25.0
+S1080,10,Prefer not to say,13.2,4.1,Education,none,1,84.4,robotics,25.0
+S1065,12,Male,4.8,3.4,education,chatgpt,2,87.0,Drama,30.0
+S1044,12,Nonbinary,5.8,6.9, Education ,ChatGPT,0,80.9,Robotics,25.0
+S1071,11,Female,4.5,1.4,Education,none,0,80.2,Soccer,25.0
+S1068,10,Female,4.7,6.4,AI Tools,NotebookLM,2,93.1,Soccer,35.0
+S1018,10,Male,5.2,3.1,Social Media,None,4,79.7,,50.0
+S1104,10,Female,3.9,2.4,music,,2,,none,30.0
+S1064,11,Female,5.5,6.0,VIDEO,ChatGPT,2,89.8, robotics ,
+S1029,10,Male,8.6,6.2,PRODUCTIVITY,Perplexity,0,83.5, none ,35.0
+S1085,11,Female,7.0,2.6,,Gemini,2,80.9,Debate,5.0
+S1104,10,Female,3.9,2.4,music,,2,,none,30.0
+S1038,10,Nonbinary,5.3,2.4,Productivity,Gemini,2,67.7,STEM Club,5.0
+S1075,10,Nonbinary,10.6,5.2,Social Media,none,4,77.2,,40.0
+S1002,11,Nonbinary,4.0,5.2,Music,ChatGPT,2,68.0,,20.0
+S1013,12,Nonbinary,6.7,4.3,Education,NotebookLM,4,,Debate,50.0
+S1035,11,Nonbinary,6.2,2.8,Gaming,,0,85.0,None,40.0
+S1005,10,Male,7.4,5.4,Music,  ,2,69.8,none,5.0
+S1109,10,Nonbinary,,6.1,social media,MagicSchool,2,75.6,Drama,45.0
+S1046,10,Nonbinary,4.8,5.9,Gaming,chatgpt,2,,Art,10.0
+S1033,10,Female,8.4,5.7,productivity,chatgpt,1,79.1,None,50.0
+S1049,10,Male,8.7,3.7,ai tools,MagicSchool,0,98.5,Art,40.0
+S1093,11,Female,4.6,1.2,gaming,none,3,69.2,Robotics,15.0
+S1110,11,Male,7.4,5.8,music,,2,78.8,,20.0
+S1025,12,Female,11.6,6.8,SOCIAL MEDIA,chatgpt,1,78.2,Soccer,15.0
+S1083,11,Male,,4.8,,chatgpt,1,83.9,Drama,5.0
+S1072,11,Prefer not to say,7.9,5.0,Video,chatgpt,2,73.2,none,
+S1034,11,Male,4.7,5.6, AI Tools ,Copilot,0,67.3,Music,35.0
+S1077,12,Male,8.3,4.9,social media,Copilot,2,93.1,robotics,10.0
+S1014,11,Male,6.3,5.7,productivity,MagicSchool,2,79.5,Soccer,30.0
+S1056,12,Female,,8.3, video ,Perplexity,1,80.2,Art,50.0
+S1082,10,,7.5,5.1, education ,None,0,91.4,robotics,50.0
+S1092,10,Nonbinary,4.4,3.8,Education,Copilot,2,86.2,Art,30.0
+S1081,11,Female,7.6,5.6, gaming ,chatgpt,1,72.7,Debate,
