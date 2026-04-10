@@ -1,0 +1,51 @@
+movie_id,title,genre,release_year,movie_length_minutes,completed,average_user_rating,liked,recommended,MPA rating,Accessibility
+M101,Galaxy Run,Sci-Fi,2022,118,yes,5,yes,yes,PG,Theaters
+M102,Laugh Track,Comedy,2019,32,no,2,no,no,PG,"Theaters, Streaming"
+M103,Deep Blue,drama,2021,95,yes,4,yes,yes,PG,Theaters
+M104,Fast Lane,Action,2020,110,yes,5,yes,yes,PG-13,Streaming
+M105,Hidden Clues,Mystery,2018,20,no,1,no,no,PG,Theaters
+M106,Planet Chef,Family,2023,88,yes,4,yes,yes,G,Streaming
+M107,Night Shift,Thriller,2022,60,no,3,no,yes,R,"Theaters, Streaming"
+M108,Summer Beats,Romance,2021,101,yes,4,yes,yes,NC-17,"Theaters, Streaming"
+M109,Pixel Quest,animation,2024,97,yes,5,yes,yes,G,Theaters
+M110,Goal Line,Sports,2017,15,no,,,no,G,Streaming
+M101,Galaxy Run,Sci-Fi,2022,40,no,3,no,yes,PG,Theaters
+M111,The Last Map,Adventure,2020,99,yes,4,yes,yes,R,Streaming
+M112,Quiet Earth,Documentary,2019,74,yes,4,yes,no,PG,Streaming
+M113,Code High,Drama,2024,84,yes,5,yes,yes,G,Theaters
+M114,Laugh Track 2,comedy,2023,91,yes,4,yes,yes,PG,Theaters
+M115,Shadow File,Thriller,2021,55,no,2,no,yes,PG-13,Streaming
+M116,Ocean Songs,Musical,2018,103,yes,5,yes,yes,PG,Theaters
+M104,Fast Lane,Action,2020,110,yes,5,yes,yes,PG-13,Streaming
+M118,Bright Start,Family,2022,49,no,2,no,no,G,Streaming
+M119,Red Planet,Sci-Fi,2024,116,yes,4,yes,yes,PG,Streaming
+M120,History Now,Documentary,2021,0,no,1,no,no,PG,Theaters
+M121,Midnight Joke,Comedy,2020,90,yes,4,yes,yes,G,Theaters
+M122,Village Lights,Drama,2017,87,yes,3,yes,no,G,Streaming
+M123,Race Day,Sports,2023,98,yes,5,yes,yes,G,Theaters
+M124,Misty Manor,Mystery,2022,79,yes,4,yes,yes,PG,Theaters
+M125,Neon Skies,Sci-Fi,2023,114,yes,5,yes,yes,PG-13,"Theaters, Streaming"
+M126,Broken Strings,drama,2020,91,yes,1,no,no,R,Theaters
+M127,Crimson Chase,action,2022,144,yes,5,yes,no,PG-13,Streaming
+M128,The Hidden Key,mystery,2021,82,yes,,,yes,PG,"Theaters, Streaming"
+M129,Love in Autumn,Romance,2019,98,yes,4,yes,yes,PG-13,Streaming
+M130,Jungle Quest,Adventure,2024,156,yes,5,yes,yes,PG,Theaters
+M131,Haunted Echoes,Thriller,2020,54,no,2,no,yes,NC-17,Theaters
+M122,Village Lights,Drama,2017,87,yes,3,yes,no,G,Streaming
+M133,Code Breakers,documentary,2022,13,no,2,no,no,PG,Theaters
+M134,Last Laugh,Comedy,2023,93,yes,4,yes,yes,PG,Theaters
+M135,Digital Dreams,Animation,2024,99,yes,5,yes,yes,PG,Theaters
+M136,Field of Glory,Sports,2021,104,yes,,,yes,G,Streaming
+M137,Desert Storm,Action,2019,67,no,1,no,yes,PG-13,Theaters
+M138,Shattered Truth,Drama,2022,149,yes,4,yes,yes,R,Theaters
+M139,Moonlight Melody,Musical,2020,102,yes,5,yes,yes,PG-13,"Theaters, Streaming"
+M130,Jungle Quest,Adventure,2024,156,yes,5,yes,yes,PG,Theaters
+M141,Mind Games,Thriller,2021,87,yes,2,no,yes,PG-13,Streaming
+M109,Pixel Quest,animation,2024,97,yes,5,yes,yes,G,Theaters
+M143,Galactic War,Sci-Fi,2024,117,yes,5,yes,yes,PG-13,"Theaters, Streaming"
+M144,The Puzzle Box,Mystery,2020,80,yes,4,yes,yes,NC-17,Theaters
+M145,Chasing Hearts,Romance,2022,52,no,2,no,no,R,Theaters
+M136,Field of Glory,Sports,2021,104,yes,,,yes,G,Streaming
+M147,Kitchen Tales,family,2021,86,yes,4,yes,yes,G,Streaming
+M148,Behind the Lens,Documentary,2023,69,yes,4,yes,yes,PG,"Theaters, Streaming"
+M149,Silent Shadows,Thriller,2024,94,yes,4,yes,yes,R,"Theaters, Streaming"
